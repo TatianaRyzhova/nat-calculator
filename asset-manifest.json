@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea8ce99c.css",
-    "main.js": "/static/js/main.134e55ec.js",
-    "index.html": "/index.html",
-    "main.ea8ce99c.css.map": "/static/css/main.ea8ce99c.css.map",
-    "main.134e55ec.js.map": "/static/js/main.134e55ec.js.map"
+    "main.css": "/nat-calculator/static/css/main.ea8ce99c.css",
+    "main.js": "/nat-calculator/static/js/main.cb391b19.js",
+    "index.html": "/nat-calculator/index.html",
+    "main.ea8ce99c.css.map": "/nat-calculator/static/css/main.ea8ce99c.css.map",
+    "main.cb391b19.js.map": "/nat-calculator/static/js/main.cb391b19.js.map"
   },
   "entrypoints": [
     "static/css/main.ea8ce99c.css",
-    "static/js/main.134e55ec.js"
+    "static/js/main.cb391b19.js"
   ]
 }
