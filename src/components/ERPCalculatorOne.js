@@ -11,15 +11,6 @@ function ERPCalculatorOne() {
         XОК: ''
     });
 
-    const labels = {
-        XНК: 'Х<sub>НК</sub>',
-        XНР: 'Х<sub>НР</sub>',
-        XГСД: 'Х<sub>ГСД</sub>',
-        XВ: 'Х<sub>В</sub>',
-        XИМТ: 'Х<sub>ИМТ</sub>',
-        XОК: 'Х<sub>ОК</sub>',
-    };
-
     const [result, setResult] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
