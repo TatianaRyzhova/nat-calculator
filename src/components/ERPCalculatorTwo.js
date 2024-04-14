@@ -28,11 +28,11 @@ function handleChange(event) {
     setSubmitted(true);
 
     const hgem = 0.053 * Number(number.Хгем);
-    const hley = 0.185 * Number(number.Хлей);
+    const hney = 0.185 * Number(number.Хней);
     const hlim = 0.376 * Number(number.Хлим);
-    const hney = 1.141 * Number(number.Хней);
+    const hley = 1.141 * Number(number.Хлей);
 
-    const uer = -6.282 + hgem + 0.185 * hley + 0.376 * hlim + 1.141 * hney;
+    const uer = -6.282 + hgem + hney + hlim - hley;
     setResult(uer);
 
     setSubmitted(false);
@@ -41,7 +41,7 @@ function handleChange(event) {
   return (
     <div className="container">
         {/* <h1>Рассчет ЕРП</h1>xs */}
-        <p>У<sub>эер</sub> = –6,282 + 0,053 * Х<sub>гем</sub> + 0,185 * Х<sub>ней</sub> + 0,376 * Х<sub>лим</sub> - 1,141 * Х<sub>лей</sub></p>
+        <p>У<sub>эер</sub> = -6,282 + 0,053 * Х<sub>гем</sub> + 0,185 * Х<sub>ней</sub> + 0,376 * Х<sub>лим</sub> - 1,141 * Х<sub>лей</sub></p>
             <p>где:</p>
             <ul>
                 <li>У<sub>эер</sub> - дискриминантная функция, характеризующая вероятность наличия послеродового эндометрита у пациенток после вагинальных родов</li>
@@ -70,7 +70,7 @@ function handleChange(event) {
                             </tr>
 
                             <tr>
-                                <th style={{width: "220px"}}>Х<sub>лей</sub></th>
+                                <th style={{width: "220px"}}>Х<sub>ней</sub></th>
                                 <th>
                                     <input
                                         type="number"
@@ -84,7 +84,7 @@ function handleChange(event) {
                             </tr>
 
                             <tr>
-                                <th style={{width: "220px"}}>Х<sub>ней</sub></th>
+                                <th style={{width: "220px"}}>Х<sub>лим</sub></th>
                                 <th>
                                     <input
                                         type="number"
@@ -98,7 +98,7 @@ function handleChange(event) {
                             </tr>
 
                             <tr>
-                                <th style={{width: "220px"}}>Х<sub>лим</sub></th>
+                                <th style={{width: "220px"}}>Х<sub>лей</sub></th>
                                 <th>
                                     <input
                                         type="number"
