@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/nat-calculator/static/css/main.1661b113.css",
-    "main.js": "/nat-calculator/static/js/main.952e52a6.js",
+    "main.js": "/nat-calculator/static/js/main.ac2d8210.js",
     "index.html": "/nat-calculator/index.html",
     "main.1661b113.css.map": "/nat-calculator/static/css/main.1661b113.css.map",
-    "main.952e52a6.js.map": "/nat-calculator/static/js/main.952e52a6.js.map"
+    "main.ac2d8210.js.map": "/nat-calculator/static/js/main.ac2d8210.js.map"
   },
   "entrypoints": [
     "static/css/main.1661b113.css",
-    "static/js/main.952e52a6.js"
+    "static/js/main.ac2d8210.js"
   ]
 }
