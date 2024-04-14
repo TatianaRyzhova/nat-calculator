@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import ERPCalculator from './components/ERPCalculator';
+import KSCalculator from './components/KSCalculator';
 
 function App() {
     return (
@@ -9,7 +10,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/erp-calculator" element={<ERPCalculator />} />
-                    <Route path="/answer2" element={<AnswerPage2 />} />
+                    <Route path="/ks-calculator" element={<KSCalculator />} />
                 </Routes>
             </div>
         </BrowserRouter>
@@ -47,14 +48,10 @@ function HomePage() {
             <h1 style={{ marginBottom: '20px' }}>Способ родоразрешения?</h1>
             <div style={buttonsContainer}>
                 <button onClick={() => navigate('/erp-calculator')} style={buttonStyles}>ЕРП</button>
-                <button onClick={() => navigate('/answer2')} style={buttonStyles}>КС</button>
+                <button onClick={() => navigate('/ks-calculator')} style={buttonStyles}>КС</button>
             </div>
         </div>
     );
-}
-
-function AnswerPage2() {
-    return <h1 style={{ textAlign: 'center' }}>Вы выбрали КС!</h1>;
 }
 
 export default App;
