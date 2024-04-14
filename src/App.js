@@ -5,7 +5,7 @@ import KSCalculator from './components/KSCalculator';
 
 function App() {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename="/nat-calculator" >
             <div>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
