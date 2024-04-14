@@ -47,7 +47,7 @@ function ERPCalculatorOne() {
     
     return (
         <div className="container">
-            <h1>Рассчет ЕРП</h1>
+            <h1>Расчет ЕРП</h1>
             <p>Р = 1 / (1 + е<sup>z</sup>)</p>
             <p>z = 5,714 * Х<sub>НК</sub> + 3,234 * X<sub>НР</sub> + 2,468 * Х<sub>ГСД</sub> + 2,240 * Х<sub>В</sub> + 0,381 * Х<sub>ИМТ</sub> + 0,008 * Х<sub>ОК</sub> – 19,028</p>
             <p>где:</p>

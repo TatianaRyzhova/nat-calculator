@@ -51,7 +51,7 @@ function KSCalculatorOne() {
     
     return (
         <div className="container">
-            <h1>Рассчет КС</h1>
+            <h1>Расчет КС</h1>
             <p>Р = 1 / (1 + е<sup>z</sup>)</p>
             <p>z = 2,326 * Х<sub>СК</sub> + 0,098 * Х<sub>НР</sub> + (-0,002) * Х<sub>ОК</sub> + 1,709 * Х<sub>НК</sub> + 0,12 * Х<sub>ИМТ</sub> + 0,825 * Х<sub>Г</sub> + 0,246 * Х<sub>ПБ</sub> + (-4,142) * Х<sub>ММ</sub> - 3,960</p>
             <p>где:</p>
