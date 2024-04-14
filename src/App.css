@@ -63,7 +63,7 @@ button:hover {
   text-align: left;
   font-size: 25px;
   font-weight: 900;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 .result-red {

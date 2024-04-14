@@ -45,7 +45,7 @@ function KSCalculatorOne() {
         const P = 1 / (1 + Math.pow(e, z));
         setResult(P);
 
-        setSubmitted(false);
+        // setSubmitted(false);
       }
 
     
@@ -77,7 +77,7 @@ function KSCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="1...2"
+                                        placeholder="1 или 2"
                                         name="ХСК"
                                         onChange={handleChange}
                                         value={number.ХСК}
@@ -91,7 +91,7 @@ function KSCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1...2"
+                                        placeholder="0, 1 или 2"
                                         name="XНР"
                                         onChange={handleChange}
                                         value={number.XНР}
@@ -118,7 +118,7 @@ function KSCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1"
+                                        placeholder="0 или 1"
                                         name="XНК"
                                         onChange={handleChange}
                                         value={number.XНК}
@@ -145,7 +145,7 @@ function KSCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1"
+                                        placeholder="0 или 1"
                                         name="XГ"
                                         onChange={handleChange}
                                         value={number.XГ}
@@ -159,7 +159,7 @@ function KSCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1"
+                                        placeholder="0 или 1"
                                         name="ХПБ"
                                         onChange={handleChange}
                                         value={number.ХПБ}
@@ -173,7 +173,7 @@ function KSCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1"
+                                        placeholder="0 или 1"
                                         name="ХММ"
                                         onChange={handleChange}
                                         value={number.ХММ}
@@ -187,12 +187,17 @@ function KSCalculatorOne() {
                 </div>
                 <button type="submit">РАССЧИТАТЬ</button>
             </form>
-            <div className="result">
-                Результат:
-                <span className={result >= 0.403 ? 'result-red' : 'result-green'}> {result}</span>
-                <p className="information">{'Значение логистической функции Р в точке cut-off составляло 0,403:'}</p>
-                <p className="information">{'Р < 0,403 - редполагается развитие послеродового эндометрита.'}</p>
-                <p className="information">{'Р ≥ 0,403 - риск развития эндометрита считается высоким.'}</p>
+            <div className="result-space" style={{ minHeight: '65px', paddingBottom: '50px' }}>
+                {submitted && (
+                    <div className="result">
+                    Результат:
+                    <span className={result >= 0.403 ? 'result-red' : 'result-green'}> {result}</span>
+                    <p className="information">{'Значение логистической функции Р в точке cut-off составляло 0,403:'}<br />
+                        {'Р < 0,403 - редполагается развитие послеродового эндометрита.'}<br />
+                        {'Р ≥ 0,403 - риск развития эндометрита считается высоким.'}
+                    </p>
+                </div>
+                )}
             </div>
         </div>
     );

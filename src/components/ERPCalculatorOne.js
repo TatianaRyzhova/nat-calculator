@@ -41,7 +41,7 @@ function ERPCalculatorOne() {
         const P = 1 / (1 + Math.pow(e, z));
         setResult(P);
 
-        setSubmitted(false);
+        // setSubmitted(false);
       }
 
     
@@ -71,7 +71,7 @@ function ERPCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1"
+                                        placeholder="0 или 1"
                                         name="XНК"
                                         onChange={handleChange}
                                         value={number.XНК}
@@ -85,7 +85,7 @@ function ERPCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="1...2"
+                                        placeholder="1 или 2"
                                         name="XНР"
                                         onChange={handleChange}
                                         value={number.XНР}
@@ -99,7 +99,7 @@ function ERPCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1"
+                                        placeholder="0 или 1"
                                         name="XГСД"
                                         onChange={handleChange}
                                         value={number.XГСД}
@@ -113,7 +113,7 @@ function ERPCalculatorOne() {
                                 <th>
                                     <input
                                         type="number"
-                                        placeholder="0...1"
+                                        placeholder="0 или 1"
                                         name="XВ"
                                         onChange={handleChange}
                                         value={number.XВ}
@@ -153,10 +153,14 @@ function ERPCalculatorOne() {
                 </div>
                 <button type="submit">РАССЧИТАТЬ</button>
             </form>
-            <div className="result">
-                Результат:
-                <span className={result >= 0.472 ? 'result-red' : 'result-green'}> {result}</span>
-                <p className="information">{'Р ≥ 0,472 - риск развития эндометрита считается высоким.'}</p>
+            <div className="result-space" style={{ minHeight: '50px', paddingBottom: '30px' }}>
+                {submitted && (
+                    <div className="result">
+                    Результат:
+                    <span className={result >= 0.472 ? 'result-red' : 'result-green'}> {result}</span>
+                    <p className="information">{'Р ≥ 0,472 - риск развития эндометрита считается высоким.'}</p>
+                </div>
+                )}
             </div>
         </div>
     );

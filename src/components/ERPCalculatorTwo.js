@@ -35,7 +35,7 @@ function handleChange(event) {
     const uer = -6.282 + hgem + hney + hlim - hley;
     setResult(uer);
 
-    setSubmitted(false);
+    // setSubmitted(false);
   }
 
   return (
@@ -115,11 +115,16 @@ function handleChange(event) {
                 </div>
                 <button type="submit">РАССЧИТАТЬ</button>
             </form>
-            <div className="result">
+            <div className="result-space" style={{ minHeight: '50px', paddingBottom: '50px' }}>
+            {submitted && (
+                <div className="result">
                 Результат:
                 <span className={result > -0.045 ? 'result-red' : 'result-green'}> {result}</span>
-                <p className="information">{'Уэер > -0,045 - группа высокого риска развития послеродового эндомтерита.'}</p>
-                <p className="information">{'Уэер < -0,045 - группа низкого риска развития послеродового эндомтерита.'}</p>
+                <p className="information">{'Уэер > -0,045 - группа высокого риска развития послеродового эндомтерита.'}<br />
+                    {'Уэер < -0,045 - группа низкого риска развития послеродового эндомтерита.'}
+                </p>
+            </div>
+            )}
             </div>
     </div>
 );
