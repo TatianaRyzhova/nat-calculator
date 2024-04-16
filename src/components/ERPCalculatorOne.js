@@ -8,7 +8,8 @@ function ERPCalculatorOne() {
         XГСД: '',
         XВ: '',
         XИМТ: '',
-        XОК: ''
+        XОК: '',
+        ХПБ: ''
     });
 
     const [result, setResult] = useState('');
@@ -36,8 +37,9 @@ function ERPCalculatorOne() {
         const hv = 2.240 * Number(number.XВ);
         const himt = 0.381 * Number(number.XИМТ);
         const hok = 0.008 * Number(number.XОК);
+        const hpb = 2.247 * Number(number.ХПБ);
 
-        const z = hnk + hnp + hgsd + hv + himt + hok -19.028;
+        const z = hnk + hnp + hgsd + hv + himt + hok + hpb -19.028;
         const P = 1 / (1 + Math.pow(e, z));
         setResult(P);
 
@@ -47,9 +49,9 @@ function ERPCalculatorOne() {
     
     return (
         <div className="container">
-            <h1>Расчет ЕРП</h1>
+            <h1 className='title'>Рассчет риска развития послеродового эндометрита после родов через естестественные родовые пути</h1>
             <p>Р = 1 / (1 + е<sup>z</sup>)</p>
-            <p>z = 5,714 * Х<sub>НК</sub> + 3,234 * X<sub>НР</sub> + 2,468 * Х<sub>ГСД</sub> + 2,240 * Х<sub>В</sub> + 0,381 * Х<sub>ИМТ</sub> + 0,008 * Х<sub>ОК</sub> – 19,028</p>
+            <p>z = 5,714 x Х<sub>НК</sub> + 3,234 x X<sub>НР</sub> + 2,468 * Х<sub>ГСД</sub> + 2,240 x Х<sub>В</sub> + 0,381 x Х<sub>ИМТ</sub> + 0,008 x Х<sub>ОК</sub> + 2,247 x Х<sub>ПБ</sub> – 19,028</p>
             <p>где:</p>
             <ul>
                 <li>Р – вероятность развития послеродового эндометрита после родов через ЕРП в долях единицы</li>
@@ -60,6 +62,7 @@ function ERPCalculatorOne() {
                     <li>Х<sub>В</sub> - наличие вирусных заболеваний во время беременности (0 вирусных заболеваний во время беременности у пациентки не было, 1 – во время беременности пациентка перенесла вирусные заболевания)</li>
                     <li>Х<sub>ИМТ</sub> - индекс массы тела пациентки на момент наступления беременности (кг/м<sup>2</sup>)</li>
                     <li>Х<sub>ОК</sub> – объем кровопотери в родах (мл)</li>
+                    <li>Х<sub>ПБ</sub> – первая беременность (0 - раннее у пациентки были беременности, 1-данная беременность у пацентки первая)</li>
             </ul>
 
             <form onSubmit={handleSubmit}>
@@ -143,6 +146,20 @@ function ERPCalculatorOne() {
                                         name="XОК"
                                         onChange={handleChange}
                                         value={number.XОК}
+                                        submitted={submitted}
+                                        required
+                                    />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style={{width: "220px"}}>Х<sub>ПБ</sub></th>
+                                <th>
+                                    <input
+                                        type="number"
+                                        placeholder="0 или 1"
+                                        name="XПБ"
+                                        onChange={handleChange}
+                                        value={number.ХПБ}
                                         submitted={submitted}
                                         required
                                     />

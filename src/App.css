@@ -41,6 +41,10 @@ label {
   text-align: left;
 }
 
+.title {
+  font-size: 30px;
+}
+
 button {
   margin: 20px 0 15px;
   padding: 0;
@@ -154,6 +158,10 @@ tr:hover {
   .result {
     max-width: 700px;
   }
+
+  .title {
+    font-size: 28px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -169,6 +177,10 @@ tr:hover {
     max-width: 80px;
     height: 35px;
     padding-left: 8px;
+  }
+
+  .title {
+    font-size: 28px;
   }
   
 }
@@ -200,4 +212,9 @@ tr:hover {
   h1 {
     font-size: 25px;
   }
+
+  .title {
+    font-size: 18px;
+  }
+
 }
