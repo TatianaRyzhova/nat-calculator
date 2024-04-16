@@ -157,7 +157,7 @@ function ERPCalculatorOne() {
                                     <input
                                         type="number"
                                         placeholder="0 или 1"
-                                        name="XПБ"
+                                        name="ХПБ"
                                         onChange={handleChange}
                                         value={number.ХПБ}
                                         submitted={submitted}
